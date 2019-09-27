@@ -7,10 +7,8 @@ function typeMessage  (message, velocity) {
     message.split('').reduce((prev,cur,index)=>{
         prev+=cur;
         if ((index+1)%velocity==0) {
-            console.log(index, prev)
             setTimeout(()=>container.innerText=prev,500+step)
             step+=500}
-            console.log(index, prev)
         return prev;
     },'')
 }
